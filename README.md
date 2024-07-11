@@ -1,1 +1,0 @@
-PROJETO FRONTEND PURO feito em react
