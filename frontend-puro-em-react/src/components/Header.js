@@ -1,18 +1,14 @@
-import React, { useEffect } from 'react';
-import './styles/header.css';
-import logo from './assets/imagens/LOGO DOINN.png';
-import './header-menu.js'; // Importa o arquivo JavaScript
+import React from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../assets/imagens/LOGO DOINN.png';
 
 const Header = () => {
-  useEffect(() => {
-  }, []);
-
   return (
     <header className="header">
       <div className="Logo hide sm:show">
-        <a href="/" title="Doin">
+        <Link to="/" title="Doin">
           <img className="logo-tamanho" src={logo} alt="Doin Motors" />
-        </a>
+        </Link>
       </div>
       <div className="header_menu">
         <div className="barra_cabecalho_1"></div>
@@ -21,11 +17,11 @@ const Header = () => {
         <p className="menu_texto">MENU</p>
       </div>
       <div className="Logo sm:hide">
-        <a href="/" title="Doin">
+        <Link to="/" title="Doin">
           <img className="logo-tamanho" src={logo} alt="Doin Motors" />
-        </a>
+        </Link>
       </div>
-      <a href="/pagina-estoque" title="NOSSO ESTOQUE" className="nosso_estoque_header">NOSSO ESTOQUE</a>
+      <Link to="/estoque" title="NOSSO ESTOQUE" className="nosso_estoque_header">NOSSO ESTOQUE</Link>
     </header>
   );
 };

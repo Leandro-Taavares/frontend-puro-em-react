@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/rodape.css';
-import logo from './assets/imagens/Logo Doin.png';
+import logo from '../assets/imagens/Logo Doin.png';
 
 const Footer = () => {
   return (
