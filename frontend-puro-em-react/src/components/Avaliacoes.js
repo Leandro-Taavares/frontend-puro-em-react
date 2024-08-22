@@ -1,16 +1,16 @@
 import React from 'react';
 import '../styles/avaliacoes.css';
-import fotoCliente from '../assets/imagens/Mask group.png';
+import fotoCliente from '../assets/imagens/fotoPerfil.png';
 
 const Avaliacoes = () => {
   return (
     <div className="secao_avaliacoes">
       <div className="avaliacao_cliente">
         <div className="fundo_cinza"></div>
-        <p className="texto_clientes"><a className="cor_nossos">Nossos</a> clientes confiam</p>
+        <p className="texto_clientes"><a href='/nossos-clientes' className="cor_nossos">Nossos</a> clientes confiam</p>
         <div className="secao_texto">
           <div className="avaliacao_texto">
-            <p className="texto_avaliacao">“Surreal 👏🏼 Atendimento extremamente diferenciado, Nem imaginava
+            <p className="texto_avaliacao">“Surreal <span role="img" aria-labelledby="claps1">👏🏼</span> Atendimento extremamente diferenciado, Nem imaginava
               que seria possível comprar um carro de forma online, e na Doin foi possível (tive ótima experiência) fazem até vídeo mostrando todos os detalhes! Me ajudou muito na decisão do carro, sem falar do ambiente super agradável e o pôs venda é sensacional...A equipe toda está de parabéns pelo engajamento e empatia com cliente!”</p>
             <div className="texto_nome">
               <img src={fotoCliente} alt="foto" className="imagem_cliente" />
@@ -18,7 +18,7 @@ const Avaliacoes = () => {
             </div>
           </div>
           <div className="avaliacao_texto texto_fundo_cinza">
-            <p className="texto_avaliacao">“Surreal 👏🏼 Atendimento extremamente diferenciado, Nem imaginava
+            <p className="texto_avaliacao">“Surreal <span role="img" aria-labelledby="claps1">👏🏼</span> Atendimento extremamente diferenciado, Nem imaginava
               que seria possível comprar um carro de forma online, e na Doin foi possível (tive ótima experiência) fazem até vídeo mostrando todos os detalhes! Me ajudou muito na decisão do carro, sem falar do ambiente super agradável e o pôs venda é sensacional...A equipe toda está de parabéns pelo engajamento e empatia com cliente!”</p>
             <div className="texto_nome">
               <img src={fotoCliente} alt="foto" className="imagem_cliente" />
@@ -26,7 +26,7 @@ const Avaliacoes = () => {
             </div>
           </div>
           <div className="avaliacao_texto">
-            <p className="texto_avaliacao">“Surreal 👏🏼 Atendimento extremamente diferenciado, Nem imaginava
+            <p className="texto_avaliacao">“Surreal <span role="img" aria-labelledby="claps1">👏🏼</span> Atendimento extremamente diferenciado, Nem imaginava
               que seria possível comprar um carro de forma online, e na Doin foi possível (tive ótima experiência) fazem até vídeo mostrando todos os detalhes! Me ajudou muito na decisão do carro, sem falar do ambiente super agradável e o pôs venda é sensacional...A equipe toda está de parabéns pelo engajamento e empatia com cliente!”</p>
             <div className="texto_nome">
               <img src={fotoCliente} alt="foto" className="imagem_cliente" />

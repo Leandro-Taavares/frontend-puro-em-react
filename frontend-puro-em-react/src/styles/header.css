@@ -25,7 +25,7 @@
 
 
 
-.menu_texto {
+.menu_texto_header {
     float: right;
     font-family: roboto;
     color: white;
@@ -37,7 +37,7 @@
     margin-left: 5px;
 }
 
-.nosso_estoque_header {
+.nosso_estoque_header_ {
     text-decoration: none;
     font-family: roboto;
     font-size: 15px;
@@ -49,7 +49,7 @@
     cursor: pointer;
 }
 
-.nosso_estoque_header:hover {
+.nosso_estoque_header_:hover {
     transition: 300ms linear;
     background-color: #C1383D;
 }
@@ -119,27 +119,27 @@
     left: 0;
 }
 
-.barra_cabecalho_1 {
+.barra_cabecalho_1_ {
     border-top: 1px solid white;
     position: absolute;
     z-index: 1;
-    width: 1%;
+    width: 20%;
     margin-top: 4px;
 }
 
-.barra_cabecalho_2 {
+.barra_cabecalho_2_ {
     border-top: 1px solid white;
     position: absolute;
     z-index: 1;
-    width: 1%;
+    width: 20%;
     margin-top: 9px;
 }
 
-.barra_cabecalho_3 {
+.barra_cabecalho_3_ {
     border-top: 1px solid white;
     position: absolute;
     z-index: 1;
-    width: 1%;
+    width: 20%;
     margin-top: 14px;
 }
 
@@ -178,7 +178,7 @@
         padding-top: 1%;
     }
 
-    .nosso_estoque_header {
+    .nosso_estoque_header_ {
         font-size: 10px;
         padding: 7px;
         margin-left: 40%;

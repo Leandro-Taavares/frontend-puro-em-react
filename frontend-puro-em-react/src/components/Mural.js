@@ -1,13 +1,13 @@
 import React from 'react';
 import '../styles/mural.css';
-import mural1 from '../assets/imagens/Mural 1.jpeg';
-import mural2 from '../assets/imagens/Mural 2.jpeg';
-import mural3 from '../assets/imagens/Mural 3.jpeg';
-import mural4 from '../assets/imagens/Mural 4.jpeg';
-import mural5 from '../assets/imagens/Mural 5.jpeg';
-import mural6 from '../assets/imagens/Mural 6.jpeg';
-import mural7 from '../assets/imagens/Mural 7.jpeg';
-import mural8 from '../assets/imagens/Mural 8.jpeg';
+import mural1 from '../assets/imagens/mural1.jpeg';
+import mural2 from '../assets/imagens/mural2.jpeg';
+import mural3 from '../assets/imagens/mural3.jpeg';
+import mural4 from '../assets/imagens/mural4.jpeg';
+import mural5 from '../assets/imagens/mural5.jpeg';
+import mural6 from '../assets/imagens/mural6.jpeg';
+import mural7 from '../assets/imagens/mural7.jpeg';
+import mural8 from '../assets/imagens/mural8.jpeg';
 
 const Mural = () => {
   return (

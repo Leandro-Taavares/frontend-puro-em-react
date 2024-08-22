@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import './styles/maps.css';
-import './main.js'; 
+import '../styles/maps.css';
 
 const Map = () => {
   useEffect(() => {
@@ -11,7 +10,7 @@ const Map = () => {
 
     script.onload = () => {
       window.initMap = () => {
-        const map = new window.google.maps.Map(document.getElementById('map'), {
+        new window.google.maps.Map(document.getElementById('map'), {
           center: { lat: -34.397, lng: 150.644 },
           zoom: 8,
         });

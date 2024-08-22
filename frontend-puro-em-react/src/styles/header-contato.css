@@ -1,4 +1,4 @@
-.header_detalhe {
+.header_contato {
     position: fixed;
     width: 100%;
     display: flex;
@@ -13,7 +13,6 @@
 }
 
 .fundo {
-    margin: unset;
     background-color: #F0F0F0;
 }
 
@@ -90,6 +89,7 @@
     display: block;
     text-decoration: none; 
 }
+
 
 .texto_menu_aberto:hover {
     transition: 0.2ms;
