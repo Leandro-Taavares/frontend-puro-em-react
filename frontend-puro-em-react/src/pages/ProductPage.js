@@ -8,10 +8,9 @@ import '../styles/aba-filtro.css';
 import '../styles/aba-estoque.css';
 import '../styles/header-estoque.css'
 import '../styles/rodape-estoque.css';
-import DataJson from '../Data/data.json'
 
 //Logos Filtro//
-import LogoBmw from '../assets/imagens/image11.png' //src={logo}//
+import LogoBmw from '../assets/imagens/image11.png' 
 import LogoAudi from '../assets/imagens/image12.png'
 import LogoMercedes from '../assets/imagens/image13.png'
 import LogoJeep from '../assets/imagens/image14.png'
@@ -22,7 +21,7 @@ const ProductPages = () => {
     const [carros, setCarros] = useState([]);
 
   useEffect(() => {
-    axios.get('DataJson')
+    axios.get('https://leandro-taavares.github.io/frontend-puro/pagina-estoque/Data/data.json')
       .then(response => {
         console.log(response.data)
         setCarros(response.data.resultado);
@@ -153,7 +152,7 @@ const ProductPages = () => {
           </div>
           <div className="estoque-carros">
           {carros.map(car => (
-              <a key={car.id} href="/frontend-puro/pagina-estoque-detalhe/index.html">
+              <a key={car.id} href="/ProductPage">
                 <div className="carros-anunciados">
                   <img src={car.imagem} alt="" className="foto-carro-class" />
                   <div className="descricao-carro">
