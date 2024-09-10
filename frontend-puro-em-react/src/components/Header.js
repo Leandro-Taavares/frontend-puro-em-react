@@ -1,40 +1,76 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../assets/imagens/logoDoinPadrao.png';
-import '../styles/header.css';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import "./Header.css";
+import logo from "../assets/imagens/logoDoinPadrao.png";
+import logoPreto from "../assets/imagens/logoDoinPreto.png";
 
 const Header = () => {
+  const location = useLocation();
+
+  const [menuAberto, setMenuAberto] = useState(false);
+
+  const abrirEFecharModal = () => {
+    setMenuAberto((prevMenuAberto) => !prevMenuAberto);
+    document.body.classList.toggle("no-scroll");
+  };
   return (
-    <header className="header">
-      <div className="Logo hide sm:show">
-        <a to="/" title="Doin">
-          <img className="logo-tamanho" src={logo} alt="Doin Motors" />
-        </a>
+    <header className={location.pathname === "/" ? "header" : "header white"}>
+      <div
+        className={`header_menu ${menuAberto ? "menu_aberto__ativo" : ""}`}
+        onClick={abrirEFecharModal}
+      >
+        <div className={`barra_cabecalho_1 ${menuAberto ? "ativo" : ""}`}></div>
+        <div className={`barra_cabecalho_2 ${menuAberto ? "ativo" : ""}`}></div>
+        <div className={`barra_cabecalho_3 ${menuAberto ? "ativo" : ""}`}></div>
+        <p className="menu_texto">{menuAberto ? "FECHAR" : "MENU"}</p>
       </div>
-      <div className="header_menu">
-        <div className="barra_cabecalho_1_"></div>
-        <div className="barra_cabecalho_2_"></div>
-        <div className="barra_cabecalho_3_"></div>
-        <p className="menu_texto_header">MENU</p>
-      </div>
-      <div className="Logo sm:hide">
+      <div className="Logo">
         <Link to="/" title="Doin">
-          <img className="logo-tamanho" src={logo} alt="Doin Motors" />
+          {location.pathname === "/" ? (
+            <img className="logo-tamanho" src={logo} alt="Doin Motors" />
+          ) : (
+            <img className="logo-tamanho" src={logoPreto} alt="Doin Motors" />
+          )}
         </Link>
       </div>
-      <Link to="/ProductPage" title="NOSSO ESTOQUE" className="nosso_estoque_header_">NOSSO ESTOQUE</Link>
-      <div class="borda_header"></div>
-      <div class="header_menu_aberto">
-        <a class="texto_menu_aberto" href="/frontend-puro/pagina-estoque/index.html">NOSSO ESTOQUE</a>
-        <a class="texto_menu_aberto" href="/frontend-puro/pagina-contato/index.html">CONTATO</a>
-        <p class="texto_menu_aberto">FINANCIE</p>
-        <p class="texto_menu_aberto">ATACADO</p>
-        <p class="texto_menu_aberto">SOBRE</p>
-        <p class="texto_menu_aberto">AVALIAÇÕES CLIENTES</p>
-    </div>
+      <Link
+        to="/ProductPage"
+        title="NOSSO ESTOQUE"
+        className="nosso_estoque_header"
+      >
+        NOSSO ESTOQUE
+      </Link>
+      <div className="borda_header"></div>
+      {menuAberto && (
+        <>
+          <div
+            className={`overlay ${menuAberto ? "menu_aberto__ativo" : ""}`}
+            onClick={abrirEFecharModal}
+          ></div>
+          <div
+            className={`header_menu_aberto ${
+              menuAberto ? "menu_aberto__ativo" : ""
+            }`}
+          >
+            <Link
+              className="texto_menu_aberto"
+              to="/ProductPage"
+              title="NOSSO ESTOQUE"
+            >
+              NOSSO ESTOQUE
+            </Link>
+            <Link
+              className="texto_menu_aberto"
+              to="/ContatoPage"
+              title="CONTATO"
+            >
+              CONTATO
+            </Link>
+          </div>
+        </>
+      )}
     </header>
-    
   );
 };
 
-export default Header;
+export default Header;  

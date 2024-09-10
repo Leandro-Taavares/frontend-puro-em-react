@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/avaliacoes.css';
+import './Avaliacoes.css';
 import fotoCliente from '../assets/imagens/fotoPerfil.png';
 
 const Avaliacoes = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/mural.css';
+import './Mural.css';
 import mural1 from '../assets/imagens/mural1.jpeg';
 import mural2 from '../assets/imagens/mural2.jpeg';
 import mural3 from '../assets/imagens/mural3.jpeg';

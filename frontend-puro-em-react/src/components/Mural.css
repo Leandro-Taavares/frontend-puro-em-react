@@ -19,7 +19,7 @@
     gap: 2px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 20rem);
-    
+    z-index: 1;
 }
 
 .sessao_fotos_column {

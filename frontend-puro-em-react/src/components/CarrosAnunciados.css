@@ -1,18 +1,5 @@
-.aba-estoque {
-    display: inline-block;
-    width: calc(100% - 455px);
-    padding-left: 25px;
-    vertical-align: top;
-}
 
-.home-estoque {
-    font-size: 12px;
-    display: block;
-    font-family: roboto;
-    color: #5F5F5F;
-    margin-bottom: 19px;
-    margin-top: 10px;
-}
+
 
 .carros-anunciados {
     display: inline-block;
@@ -22,19 +9,26 @@
     padding-bottom: 20px;
     margin-right: 35px;
     cursor: pointer;
-    width: 221px;
+    width: 270px;
     text-decoration: none;
     color: black;
 }
+
+.carros-anunciados.carros-anunciados-detalhe {
+    margin-right: 30px;
+    width: 340px;
+}
+
 
 .foto-carro-class {
     max-width: 100%;
     height: 150px;
     border-radius: 10px;
+    width: 100%;
 }
 
-.estoque-carros {
-    max-width: 100%;
+.foto-carro-class.foto-carro-class-detalhe {
+    height: 140px;
 }
 
 .descricao-carro {
@@ -48,16 +42,16 @@
     margin-bottom: 2px;
 }
 
+.preco-carro {
+    font-size: 20px;
+    font-family: roboto;
+}
+
 .modelo-carro {
     font-size: 10px;
     font-family: roboto;
     color: #888888;
     margin-bottom: 10px;
-}
-
-.preco-carro {
-    font-size: 20px;
-    font-family: roboto;
 }
 
 .ano-carro {
@@ -82,48 +76,42 @@
     margin-top: 15px;
 }
 
-.ver-mais {
-    font-size: 10px;
-    font-family: roboto;
-    padding-left: 65px;
-    margin: 7px;
-}
-
 .borda-ver-mais:hover {
     background-color: #C1383D;
     transition: 300ms linear;
     color: #FFFFFF;
 }
 
-.filtro-mobile {
-    display: none;
+.ver-mais {
+    font-size: 12px;
+    font-family: roboto;
+    margin: 7px;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
-    
-    .aba-estoque {
-        width: 100%;
-        padding-left: 1%;
+
+    .preco-carro {
+        display: flex;
+        padding-bottom: 5%;
     }
 
-    .filtrar-img-mobile {
-        width: 15px;
-    }
-
-    .home-estoque {
-        margin-bottom: 5%;
-        margin-top: unset;
-        display: inline-block;
-    }
-
-    .filtro-mobile {
-        display: block;
+    .km-carro {
         float: right;
-        padding-right: 2%;
     }
 
-    .estoque-carros {
-        text-align: center;
+    .borda-ver-mais {
+        margin-top: 15%;
+        margin-right: unset;
+    }
+
+    .ver-mais {
+        font-size: 12px;
+        padding-left: unset;
+    }
+
+    .ano-carro {
+        float: left;
     }
 
     .carros-anunciados {
@@ -152,52 +140,11 @@
     .nome-carro, .modelo-carro {
         display: flex;
     }
-
-    .preco-carro {
-        display: flex;
-        padding-bottom: 5%;
-    }
-
-    .ano-carro {
-        float: left;
-    }
-
-    .km-carro {
-        float: right;
-    }
-
-    .borda-ver-mais {
-        margin-top: 15%;
-        margin-right: unset;
-    }
-
-    .ver-mais {
-        font-size: 12px;
-        padding-left: unset;
-    }
-
 }
 
+
 @media (min-width: 769px) and (max-width: 1439px) {
-    .aba-estoque {
-        width: 100%;
-    }
 
-    .home-estoque {
-        margin-bottom: 5%;
-        margin-top: unset;
-        display: inline-block;
-    }
-
-    .filtro-mobile {
-        display: block;
-        float: right;
-        padding-right: 2%;
-    }
-
-    .filtrar-img-mobile {
-        width: 15px;
-    }
 
     .carros-anunciados {
         margin-right: 3%;   

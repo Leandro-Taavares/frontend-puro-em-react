@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/video.css';
+import './Video.css';
 import fundoImg from '../assets/imagens/fundo.jpg';
 import logoImg from '../assets/imagens/deltaDoin.png';
 

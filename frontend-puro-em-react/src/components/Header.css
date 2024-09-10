@@ -1,12 +1,40 @@
 .header {
+    left: 0;
     position: fixed;
-    width: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    top: 15px; 
-    left: 10%;
     z-index: 3;
+    top: 0;
+    padding: 1% 10%;
+    box-sizing: border-box;
+}
+
+.header.white {
+    background-color: white;
+    box-shadow: 0px 0px 10px #888888;
+    border: 1px solid #FFFFFF;
+}
+
+.header.white .menu_texto {
+    color: black;
+}
+
+.header.white .barra_cabecalho_1,
+.header.white .barra_cabecalho_2 ,
+.header.white .barra_cabecalho_3 {
+border-color: black;
+
+}
+
+.header.white .nosso_estoque_header{
+    color: black;
+    border-color: black;
+}
+
+.header.white .borda_header {
+    display: none;
 }
 
 .menu_aberto {
@@ -25,26 +53,26 @@
 
 
 
-.menu_texto_header {
-    float: right;
+.menu_texto {
     font-family: roboto;
     color: white;
     font-size: 15px;
-    padding-top: 2px;
-    padding-left: 20px;
+    padding-left: 25px;
     letter-spacing: 1px;
     font-weight: 500;
-    margin-left: 5px;
+    margin: 0; 
+    padding-top: 18px;
+    z-index: 3;
 }
 
-.nosso_estoque_header_ {
+.nosso_estoque_header {
     text-decoration: none;
     font-family: roboto;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 1px;
-    color: white;
-    border: 1px solid white;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
     padding: 10px;
     cursor: pointer;
 }
@@ -55,6 +83,8 @@
 }
 
 .header_menu {
+    display: flex;
+    align-items: center;
     cursor: pointer;
 }
 
@@ -62,15 +92,15 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 70%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Cor escura para cobrir a tela */
-    z-index: 9999; /* Garante que fique sobre todos os outros elementos */
-    display: none; /* Inicialmente invisível */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none; 
 }
 
-.menu_aberto__ativo .overlay {
-    display: block; /* Mostra a overlay quando o menu está aberto */
+.overlay.menu_aberto__ativo {
+    display: block; 
 }
 
 .no-scroll {
@@ -82,23 +112,23 @@
 }
 
 .header_menu_aberto {
-    position: absolute;
-    font-weight: 500;
-    font-size: 18px;
-    color: #DCDCDC;
+    position: fixed;
+    top: 0;
+    left: -100%; 
+    width: 70%; /* Ajuste conforme necessário */
     height: 100vh;
-    margin-bottom: 10px;
-    padding-top: 100px;
-    padding-left: 22%;
-    font-family: roboto;
-    padding-bottom: 35%;
-    z-index: 2;
-    left: -170vw;
-    transition: all 0.5s;
-    backdrop-filter: blur(20px) saturate(1.8);
     background: rgba(0,0,0,0.6);
-    max-width: 1200px;
-    overflow: hidden;
+    color: #DCDCDC;
+    font-size: 18px;
+    font-family: roboto;
+    padding-left: 22%;
+    padding-top: 100px;
+    transition: left 0.3s ease-in-out; 
+    z-index: 2;
+    overflow: hidden; 
+}
+.header_menu_aberto.menu_aberto__ativo {
+    left: 0; 
 }
 
 .texto_menu_aberto  {
@@ -119,38 +149,47 @@
     left: 0;
 }
 
-.barra_cabecalho_1_ {
-    border-top: 1px solid white;
+.barra_cabecalho_1 {
+    border-top: 2px solid white;
     position: absolute;
-    z-index: 1;
-    width: 20%;
-    margin-top: 4px;
+    z-index: 3;
+    width: 16px;
+    margin-top: 6px;
 }
 
-.barra_cabecalho_2_ {
-    border-top: 1px solid white;
+.barra_cabecalho_2 {
+    border-top: 2px solid white;
     position: absolute;
-    z-index: 1;
-    width: 20%;
-    margin-top: 9px;
+    z-index: 3;
+    width: 16px;
+    margin-top: 18px;
 }
 
-.barra_cabecalho_3_ {
-    border-top: 1px solid white;
+.barra_cabecalho_3 {
+    border-top: 2px solid white;
     position: absolute;
-    z-index: 1;
-    width: 20%;
-    margin-top: 14px;
+    z-index: 3;
+    width: 16px;
+    margin-top: 30px;
 }
 
 .barra_cabecalho_1.ativo {
-    margin-top: 7px;
+    margin-top: 13px;
     transform: rotate(40deg);
 }
 
+.barra_cabecalho_2.ativo {
+    display: none;
+}
+
 .barra_cabecalho_3.ativo {
-    margin-top: 7px;
+    margin-top: 13px;
     transform: rotate(-40deg);
+}
+
+.Logo {
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 768px) {

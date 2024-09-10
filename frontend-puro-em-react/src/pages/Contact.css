@@ -1,4 +1,4 @@
-.section {
+.section_contato {
     padding-top: 10%;
     padding-bottom: 10%;
 }
@@ -38,18 +38,12 @@
     padding-right: 5%;
 }
 
-.texto-enviar-mensagem {
-    color: white;
-    padding-left: 5%;
-    font-size: 20px;
-    font-family: 'Roboto';
-}
-
 .escrita-inf-contato {
     font-family: 'Roboto';
     display: block;
     font-size: 22px;
-    font-weight: bold;  
+    font-weight: bold;
+    margin: 22px 0px 22px 0px;  
 }
 
 .escrita-inf-horario, .escrita-inf {
@@ -59,6 +53,7 @@
     align-items: center;
     text-decoration: none;
     color: black;
+    margin: 16px 0px 16px 0px;
 }
 
 .imgs-contato {

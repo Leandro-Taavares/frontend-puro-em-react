@@ -1,5 +1,6 @@
 import React from "react";
-import "../styles/rodape.css";
+import "./Footer.css";
+import { Link } from 'react-router-dom';
 import logo from "../assets/imagens/logoDoinPadrao.png";
 import telefoneBranco from "../assets/imagens/telefoneBranco.png";
 import whatsAppPreto from "../assets/imagens/whatsAppPreto.png";
@@ -16,29 +17,14 @@ const Footer = () => {
           <nav>
             <ul className="topicos_rodape">
               <li>
-                <a href="/pagina-estoque" title="NOSSO ESTOQUE">
+                <Link to="/ProductPage" title="NOSSO ESTOQUE">
                   NOSSO ESTOQUE
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/pagina-contato" title="CONTATO">
+                <Link to="/ContatoPage" title="CONTATO">
                   CONTATO
-                </a>
-              </li>
-              <li>
-                <a href="/financie" title="financie">
-                  FINANCIE
-                </a>
-              </li>
-              <li>
-                <a href="/atacado" title="atacado">
-                  ATACADO
-                </a>
-              </li>
-              <li>
-                <a href="/sobre" title="sobre">
-                  SOBRE
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -69,9 +55,9 @@ const Footer = () => {
                     <p class="horario_funcionamento">Segunda á Sabado: 09h ás 19h</p>
                 </div>
                 <div class="redes_sociais">
-                    <a class="espacamento" href="https://www.facebook.com/doinmotors"><img src={facebook} alt="facebook"/></a>
-                    <a class="espacamento" href="https://www.youtube.com/c/DoinMotors"><img src={youtube} alt="youtube"/></a>
-                    <a class="espacamento" href="https://www.instagram.com/doinmotors/"><img src={instagram} alt="instagram"/></a>
+                    <a class="espacamento" href="https://www.facebook.com/doinmotors" target="_blank" rel=""><img src={facebook} alt="facebook"/></a>
+                    <a class="espacamento" href="https://www.youtube.com/c/DoinMotors" target="_blank" rel=""><img src={youtube} alt="youtube"/></a>
+                    <a class="espacamento" href="https://www.instagram.com/doinmotors/" target="_blank" rel=""><img src={instagram} alt="instagram"/></a>
                 </div>
             </div>
       </div>

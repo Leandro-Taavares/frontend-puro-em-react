@@ -13,6 +13,11 @@
     z-index: 1;
 }
 
+.map-container.small {
+    width: 50%;
+    height: 50vh;
+}
+
 .seta {
     height: 0;
     width: 0;
@@ -29,7 +34,7 @@
 #map {
     width: 100%;
     filter: brightness();
-    height: 50vh;
+    height: 40vh;
 }
 
 @media (max-width: 768px) {
