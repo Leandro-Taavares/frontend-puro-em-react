@@ -15,8 +15,13 @@ const Header = () => {
   };
   return (
     <header className={location.pathname === "/" ? "header" : "header white"}>
+      <div className="Logo hide sm:show">
+            <Link href="/" title="Doin">
+                <img className="logo-tamanho" src={logo} alt="Doin Motors" />
+            </Link>
+        </div>
       <div
-        className={`header_menu ${menuAberto ? "menu_aberto__ativo" : ""}`}
+        className="header_menu"
         onClick={abrirEFecharModal}
       >
         <div className={`barra_cabecalho_1 ${menuAberto ? "ativo" : ""}`}></div>
@@ -24,7 +29,7 @@ const Header = () => {
         <div className={`barra_cabecalho_3 ${menuAberto ? "ativo" : ""}`}></div>
         <p className="menu_texto">{menuAberto ? "FECHAR" : "MENU"}</p>
       </div>
-      <div className="Logo">
+      <div className="Logo sm:hide">
         <Link to="/" title="Doin">
           {location.pathname === "/" ? (
             <img className="logo-tamanho" src={logo} alt="Doin Motors" />
@@ -48,9 +53,7 @@ const Header = () => {
             onClick={abrirEFecharModal}
           ></div>
           <div
-            className={`header_menu_aberto ${
-              menuAberto ? "menu_aberto__ativo" : ""
-            }`}
+            className={`header_menu_aberto ${menuAberto ? "menu_aberto__ativo" : ""}`}
           >
             <Link
               className="texto_menu_aberto"

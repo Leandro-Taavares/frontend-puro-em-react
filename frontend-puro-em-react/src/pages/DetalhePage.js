@@ -21,6 +21,7 @@ SwiperCore.use([Navigation, Pagination]);
 
 const Estoque = () => {
   const [isFixed, setIsFixed] = useState(false);
+  const [isInfoVisible, setIsInfoVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -100,6 +101,10 @@ const Estoque = () => {
       });
   }, []);
 
+  const toggleInfo = () => {
+    setIsInfoVisible((prev) => !prev); 
+  };
+
   return (
     <div className="fundo">
       <section>
@@ -129,7 +134,7 @@ const Estoque = () => {
         <div className="swiper-button-next"></div>
         <div className="swiper-button-prev"></div>
         <div className="swiper-pagination"></div>
-        <img src={setaMobile} alt="Seta-Mobile" className="seta-mobile" />
+        <img src={setaMobile} alt="Seta-Mobile" className="seta-mobile" onClick={toggleInfo}/>
         <div className="aba-informações-carros">
           <div className="informações-carro">
             <div className="primeira-linha">
@@ -180,7 +185,7 @@ const Estoque = () => {
               <p className="informações-texto"></p>
             </div>
           </div>
-          <div className={`informações-carro-2 ${isFixed ? "fixed" : ""}`}>
+          <div className={`informações-carro-2 ${isFixed ? "fixed" : ""} ${isInfoVisible ? "visible" : "hidden"}`}>
             <p className="informações-preco-carro">R$ 130.000,00</p>
             <div className="fundo-whatsapp">
               <img src={whatsApp} alt="whatsapp" className="img-whatsapp" />
@@ -208,6 +213,7 @@ const Estoque = () => {
               <p className="texto-avalie-carro">Avalie seu carro</p>
             </div>
           </div>
+          <div className="carros-semelhantes">
           <CarrosAnunciados
             to="/DetalhePage"
             id="carros-anunciados carros-anunciados-detalhe"
@@ -241,6 +247,7 @@ const Estoque = () => {
             preco={130000.0}
             page="detalhe"
           />
+          </div>
         </div>
       </section>
     </div>

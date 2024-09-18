@@ -20,6 +20,7 @@
   cursor: pointer;
   border-radius: 50%;
   top: 25%;
+  z-index: 1;
 }
 
 .swiper-button-next::after,
@@ -241,6 +242,14 @@
   font-size: 20px;
   font-family: "Roboto";
 }
+
+.carros-semelhantes {
+  max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .fundo-whatsapp {
   background-color: #27ac35;
   display: inline-flex;
@@ -266,6 +275,15 @@
     z-index: 2;
     display: block;
   }
+
+  .carros-semelhantes {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
   .swiper-slide:nth-child(1n) {
     width: 100%;
   }
@@ -282,9 +300,21 @@
   }
   .informações-carro-2 {
     display: none;
-    transition: all 0.5s;
-    right: -100vw;
+    transition: transform 0.5s ease;
+    overflow: hidden; 
+    max-height: 0; 
+    opacity: 0; 
+    right: 0;
   }
+  .informações-carro-2.hidden {
+    display: none;
+  }
+  .informações-carro-2.visible {
+    display: block;
+    max-height: 500px;
+    opacity: 1;
+  }
+
   .aba-informações-carros {
     width: 95%;
   }
@@ -296,6 +326,15 @@
   .Dono {
     padding-top: 2%;
   }
+
+  .itens-opcionais-quarta-coluna {
+    display: none;
+  }
+
+  .itens-opcionais-primeira-coluna, .itens-opcionais-segunda-coluna, .itens-opcionais-terceira-coluna {
+    margin-right: 3%;
+  }
+
 }
 
 @media (min-width: 769px) and (max-width: 1439px) {
@@ -319,6 +358,7 @@
     position: absolute;
     z-index: 2;
     display: block;
+
   }
   .informações-carro {
     width: 100%;

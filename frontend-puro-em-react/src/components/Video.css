@@ -34,12 +34,12 @@
     color: #151515;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     
     .frase_sonho {
         font-size: 20px;
         padding: 10px 15px 10px 20px;
-        width: 263px;
+        width: 80%;
     }
 
     .logo_delta {
@@ -48,12 +48,12 @@
 
 }
 
-@media (min-width: 769px) and (max-width: 1439px) {
+@media (min-width: 768px) and (max-width: 1439px) {
 
     .frase_sonho {
         font-size: 30px;
         padding: 15px 20px 15px 25px;
-        width: 360px;
+        width: 55%;
     }
 
     .logo_delta {

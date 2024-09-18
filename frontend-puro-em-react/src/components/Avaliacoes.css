@@ -106,6 +106,7 @@ color: #C1383D;
     .cor_nossos {
         color: #C1383D;
         margin-right: unset;
+        text-decoration: none;
     }
 
 }

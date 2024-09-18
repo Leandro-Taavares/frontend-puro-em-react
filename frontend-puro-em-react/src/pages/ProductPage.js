@@ -1,42 +1,48 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
-// CSS
 import "./ProductPage.css";
-
-//Logos Filtro
 import LogoBmw from "../assets/imagens/image11.png";
 import LogoAudi from "../assets/imagens/image12.png";
 import LogoMercedes from "../assets/imagens/image13.png";
 import LogoJeep from "../assets/imagens/image14.png";
 import CarrosAnunciados from "../components/CarrosAnunciados";
+import IconeMobile from "../assets/imagens/filtrarMobile.png";
 
 const ProductPages = () => {
   const [carros, setCarros] = useState([]);
+  const [filtroAberto, setFiltroAberto] = useState(false);
 
   useEffect(() => {
-    axios
-      .get(
-        "https://leandro-taavares.github.io/frontend-puro/pagina-estoque/Data/data.json"
-      )
-      .then((response) => {
-        console.log(response.data);
+    axios.get("https://leandro-taavares.github.io/frontend-puro/pagina-estoque/Data/data.json")
+      .then(response => {
         setCarros(response.data.resultado);
       })
-      .catch((error) => {
+      .catch(error => {
         console.error("Erro ao buscar os dados", error);
       });
   }, []);
 
+  const abrirEFecharModal = () => {
+    console.log("Filtro aberto antes: ", filtroAberto);
+    setFiltroAberto(!filtroAberto);
+    console.log("Filtro aberto depois: ", !filtroAberto);
+    if (!filtroAberto) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  };
+
+
   return (
     <div className="estoque-page">
       <section className="section">
-        <div className="aba-filtro">
+      <div className={`aba-filtro ${filtroAberto ? 'filtro_aberto__ativo' : ''}`}>
           <div className="marca-carros">
             <p className="texto-marca-carros">Marca de carro</p>
             <div className="fechar-filtro">
-              <p className="fechar-filtro-mobile-x"></p>
-              <p className="fechar-filtro-mobile-x-2"></p>
+            <p onClick={abrirEFecharModal} className="fechar-filtro-mobile-x"></p>
+            <p onClick={abrirEFecharModal} className="fechar-filtro-mobile-x-2"></p>
             </div>
           </div>
           <div className="logo-marcas">
@@ -236,9 +242,9 @@ const ProductPages = () => {
           <div className="home-estoque">
             <p>Home - Nosso estoque</p>
           </div>
-          <div className="filtro-mobile">
+          <div className="filtro-mobile" onClick={abrirEFecharModal}>
             <img
-              src="imagens-site/filtrar-mobile.png"
+              src={IconeMobile}
               alt="icone-filtro"
               className="filtrar-img-mobile"
             />

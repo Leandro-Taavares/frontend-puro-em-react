@@ -3,7 +3,7 @@
   width: calc(100% - 455px);
   padding-left: 40px;
   vertical-align: top;
-  padding-top: 10px;
+  padding: 2%;
 }
 
 .home-estoque {
@@ -16,68 +16,22 @@
 }
 
 .estoque-carros {
-  max-width: 100%;
+  max-width: 99%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
 }
 
 .filtro-mobile {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .aba-estoque {
-    width: 100%;
-    padding-left: 1%;
-  }
-
-  .filtrar-img-mobile {
-    width: 15px;
-  }
-
-  .home-estoque {
-    margin-bottom: 5%;
-    margin-top: unset;
-    display: inline-block;
-  }
-
-  .filtro-mobile {
-    display: block;
-    float: right;
-    padding-right: 2%;
-  }
-
-  .estoque-carros {
-    text-align: center;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1439px) {
-  .aba-estoque {
-    width: 100%;
-  }
-
-  .home-estoque {
-    margin-bottom: 5%;
-    margin-top: unset;
-    display: inline-block;
-  }
-
-  .filtro-mobile {
-    display: block;
-    float: right;
-    padding-right: 2%;
-  }
-
-  .filtrar-img-mobile {
-    width: 15px;
-  }
-}
-
 .section {
-  padding-top: 5%;
   display: block;
   width: 100%;
   background-color: #f0f0f0;
-  margin-top: 1%;
+  margin-top: 4%;
 }
 
 .aba-filtro {
@@ -357,7 +311,31 @@ input[type="text"] {
 
 @media (max-width: 768px) {
   .section {
-    padding-top: 15%;
+    padding-top: 20%;
+  }
+
+  .aba-estoque {
+    width: 100%;
+  }
+
+  .filtrar-img-mobile {
+    width: 15px;
+  }
+
+  .home-estoque {
+    margin-bottom: 5%;
+    margin-top: unset;
+    display: inline-block;
+  }
+
+  .filtro-mobile {
+    display: block;
+    float: right;
+  }
+
+  .estoque-carros {
+    text-align: center;
+    display: block;
   }
 
   .aba-filtro {
@@ -407,6 +385,25 @@ input[type="text"] {
     display: block;
     left: 0;
     transition: all 0.5s;
+  }
+  .aba-estoque {
+    width: 100%;
+  }
+
+  .home-estoque {
+    margin-bottom: 5%;
+    margin-top: unset;
+    display: inline-block;
+  }
+
+  .filtro-mobile {
+    display: block;
+    float: right;
+    padding-right: 2%;
+  }
+
+  .filtrar-img-mobile {
+    width: 15px;
   }
 
   .fechar-filtro-mobile-x,
