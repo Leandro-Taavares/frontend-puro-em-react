@@ -1,6 +1,8 @@
 import React from "react";
 import "./Footer.css";
 import { Link } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { changeBrand, toggleFuelLabel } from "../store/reduxReact";
 import logo from "../assets/imagens/logoDoinPadrao.png";
 import telefoneBranco from "../assets/imagens/telefoneBranco.png";
 import whatsAppPreto from "../assets/imagens/whatsAppPreto.png";
@@ -9,11 +11,19 @@ import facebook from "../assets/imagens/facebook.png";
 import instagram from "../assets/imagens/instagram.png";
 
 const Footer = () => {
+
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(changeBrand("MECABENZ"));
+    dispatch(toggleFuelLabel());
+  };
+
   return (
     <footer>
       <div className="container">
         <div className="categorias_footer">
-          <img src={logo} alt="logo" className="logo_doin" />
+          <img src={logo} alt="logo" className="logo_doin" onClick={handleClick} />
           <nav>
             <ul className="topicos_rodape">
               <li>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import axios from "axios";
 import "./ProductPage.css";
 import LogoBmw from "../assets/imagens/image11.png";
@@ -11,6 +12,10 @@ import IconeMobile from "../assets/imagens/filtrarMobile.png";
 const ProductPages = () => {
   const [carros, setCarros] = useState([]);
   const [filtroAberto, setFiltroAberto] = useState(false);
+
+  const brand = useSelector((state) => state.brand.brand);
+
+  const fuelLabel = useSelector((state) => state.brand.fuelLabel);
 
   useEffect(() => {
     axios.get("https://leandro-taavares.github.io/frontend-puro/pagina-estoque/Data/data.json")
@@ -60,7 +65,7 @@ const ProductPages = () => {
                 src={LogoMercedes}
                 className="logo-mercedes1"
               />
-              <p className="texto-mercedes1">MERCEDES</p>
+              <p className="texto-mercedes1">{brand}</p>
             </div>
             <div className="marca marca-padding marca-4">
               <img alt="iconeMarca" src={LogoJeep} className="logo-jeep1" />
@@ -80,7 +85,7 @@ const ProductPages = () => {
                 src={LogoMercedes}
                 className="logo-mercedes2"
               />
-              <p className="texto-mercedes2">MERCEDES</p>
+              <p className="texto-mercedes2">{brand}</p>
             </div>
             <div className="marca marca-padding marca-margin marca-8">
               <img src={LogoJeep} alt="iconeMarca" className="logo-jeep2" />
@@ -177,7 +182,7 @@ const ProductPages = () => {
           </div>
           <div className="border"></div>
           <div className="sexta-aba">
-            <p className="filtro-combustivel">Combustivel</p>
+          <p className="filtro-combustivel">{fuelLabel}</p>;
             <div className="filtros-usados-novos">
               <div className="filtro-alcool">
                 <input

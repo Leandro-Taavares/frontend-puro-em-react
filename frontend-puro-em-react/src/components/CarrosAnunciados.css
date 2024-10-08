@@ -90,6 +90,10 @@
         padding-bottom: 5%;
     }
 
+    .carros-anunciados.carros-anunciados-detalhe {
+        width: 600px;
+    }
+
     .km-carro {
         float: right;
     }
